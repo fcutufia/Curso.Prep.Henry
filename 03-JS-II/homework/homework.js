@@ -156,25 +156,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero === 0) {
-    return false}
-    else if (numero === 1) {
-      return false}
-      else if (numero === 2) {
-      return true}
-      else if (numero === 3) {
-      return true}
-      else if (numero === 5) {
-      return true}
-      var primox = 0
-       for (i = 1; i < 6 ; i++){ 
-       var primo = (numero % primox[i])}  
-       if (Number.isInteger(primo)) {
-       return false}
-       else return true
-  
+  if (numero === 0 || numero === 1 || numero === 4) {
+    return false;}
+    for (var x = 2; x < numero / 2; x++) {
+       if (numero % x === 0) {
+            return false;}
+       }
+     return true;  
 }
-esPrimo(8)
+
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
